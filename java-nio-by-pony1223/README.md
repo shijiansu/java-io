@@ -1,18 +1,3 @@
-![](https://img.shields.io/badge/language-java-blue)
-![](https://img.shields.io/badge/technology-javase,%20nio-blue)
-![](https://img.shields.io/badge/development%20year-2017-orange)
-![](https://img.shields.io/badge/contributor-shijian%20su-purple)
-![](https://img.shields.io/badge/license-MIT-lightgrey)
-
-![](https://img.shields.io/github/languages/top/shijiansu/core-java-nio-by-pony1223)
-![](https://img.shields.io/github/languages/count/shijiansu/core-java-nio-by-pony1223)
-![](https://img.shields.io/github/languages/code-size/shijiansu/core-java-nio-by-pony1223)
-![](https://img.shields.io/github/repo-size/shijiansu/core-java-nio-by-pony1223)
-![](https://img.shields.io/github/last-commit/shijiansu/core-java-nio-by-pony1223?color=red)
-![](https://github.com/shijiansu/core-java-nio-by-pony1223/workflows/ci%20build/badge.svg)
-
---------------------------------------------------------------------------------
-
 - https://www.cnblogs.com/pony1223/p/8138233.html / 2017
 
 --------------------------------------------------------------------------------
@@ -228,7 +213,6 @@ Buffer 所有子类提供了两个用于数据操作的方法： get()与 put() 
 
 [_1_DirectBufferTest.java](/src/test/java/core/java/nio/based/on/pony1223/_1_DirectBufferTest.java)
 
-
 ## 二、通道（Channel）
 
 通道（Channel）：由 java.nio.channels 包定义的。 Channel 表示 IO 源与目标打开的连接。Channel 类似于传统的“流”。只不过 Channel本身不能直接访问数据， Channel 只能与Buffer 进行交互。
@@ -238,7 +222,6 @@ Buffer 所有子类提供了两个用于数据操作的方法： get()与 put() 
 ![](image/before_channel_with_cpu_io.png)
 
 上面这张图是指当准备从磁盘或内存中copy数据，进行IO操作的时候，需要建立IO 连接，那么这个时候所有的调度中心都在CPU上面，那么当有很多IO请求的时候，那么CPU都要直接参与调度，那么势必会影响到CPU的执行效率，因为所有的IO从建立连接到传入数据都要经过CPU的操作来完成，于是为了节省CPU的占用率，于是出现了下面的改进；
-
 
 ![](image/before_channel_no_cpu_io.png)
 
@@ -292,7 +275,6 @@ Java 为 Channel 接口提供的最主要实现类如下：
 将数据从源通道传输到其他 Channel 中
 
 ![](image/transferFrom.png)
-
 ### transferTo()
 
 将数据从源通道传输到其他 Channel 中
